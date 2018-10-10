@@ -1,0 +1,27 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		//declaracion de variables
+		int numero1;
+		int numero2;
+		int suma;
+		
+		//lectura de teclado
+		Console.WriteLine("Introduce el primer número:");
+		numero1 = Convert.ToInt32(Console.ReadLine());
+		Console.WriteLine("Introduce el segundo número:");
+		numero2 = Convert.ToInt32(Console.ReadLine());
+						  
+		//operaciones
+		suma = numero1 + numero2;
+		
+			
+		//output
+		Console.WriteLine("La suma es:" + suma);
+		
+		
+	}
+}
