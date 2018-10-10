@@ -1,0 +1,43 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		
+		//declaración de variables 3 numeros y dos textos
+		int Nivel;
+		int PuntosVida;
+		int VidaFinal;
+		string introducirNivel;
+		string introducirPuntosVida;
+		string TipodePersonajeInput;
+		
+		//inicialización, las dos primeras para que lea el valor introducido y las dos siguientes para que pueda convertir esos valores y trabajar con ellos
+		
+		Console.WriteLine("Introduce el NIvel");
+		introducirNivel = Console.ReadLine ();
+		Console.WriteLine("Introduce los puntos de vida");
+		introducirPuntosVida = Console.ReadLine ();
+		Nivel = Convert.ToInt32(introducirNivel);
+		PuntosVida = Convert.ToInt32(introducirPuntosVida);
+		Console.WriteLine("Introduce el tipo de personaje: Mele o Rango");
+		TipodePersonajeInput = Console.ReadLine();
+		
+		if (TipodePersonajeInput == "Mele")
+		{
+				
+		VidaFinal = Nivel * PuntosVida * 3/2;
+		
+		Console.WriteLine( "La vida final es");
+		Console.WriteLine(VidaFinal);
+		}
+		else
+		{
+			VidaFinal = Nivel * PuntosVida;
+				
+				Console.WriteLine( "La vida final es");
+			Console.WriteLine(VidaFinal);
+		}			
+}
+}
