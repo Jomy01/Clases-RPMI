@@ -32,11 +32,15 @@ public class Program
 		{
 			vidaFinal = nivel * vidaInicial * 1.5f;
 		}
-		else
+		else if (clase == "rango")
 		{
-		vidaFinal = nivel * vidaInicial;
+			vidaFinal = nivel * vidaInicial;
+		
+		}else
+		{
+			Console.WriteLine("Error al leer la clase");
+			vidaFinal = -1;
 		}
-			
 		//output
 		Console.WriteLine("Mi nivel es:" + nivel);
 		Console.WriteLine("Mi vida inicial es:" + vidaInicial);
@@ -45,4 +49,5 @@ public class Program
 		
 		
 	}
+	
 }
