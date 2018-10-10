@@ -1,0 +1,41 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		
+		//declaración de variables
+		int numero;
+		string numeroInput;
+		
+		
+		//lectura de teclado (input)
+		Console.WriteLine("Introduce un número");
+		numeroInput = Console.ReadLine();
+		
+		//conversión de input a número
+		numero = Convert.ToInt32(numeroInput);
+		
+		
+		//operaciones
+		if (numero > 10)
+		{
+			Console.WriteLine("El número no pertenece al rango deseado");
+		}
+		else if (numero < 0)
+		{
+			Console.WriteLine("El número no pertenece al rango deseado");
+		}
+		else 
+		{
+			Console.WriteLine("El  número pertenece al rango deseado");
+		}
+			
+		
+		
+		
+		
+	}
+	
+}
