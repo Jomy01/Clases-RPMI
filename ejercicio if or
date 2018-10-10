@@ -18,15 +18,12 @@ public class Program
 		numero = Convert.ToInt32(numeroInput);
 		
 		
-		//operaciones
-		if (numero > 10)
+		//operaciones con OR
+		if (numero > 10 || numero < 0)
 		{
 			Console.WriteLine("El número no pertenece al rango deseado");
 		}
-		else if (numero < 0)
-		{
-			Console.WriteLine("El número no pertenece al rango deseado");
-		}
+		
 		else 
 		{
 			Console.WriteLine("El  número pertenece al rango deseado");
