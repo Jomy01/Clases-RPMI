@@ -1,0 +1,22 @@
+using System;
+					
+public class Program
+{
+	public static void Main()
+	{
+		int miedad;
+		string miedadInput;
+		
+		miedadInput = Console.ReadLine();
+		miedad = Convert.ToInt32(miedadInput);
+		if (miedad > 17)
+		{
+			Console.WriteLine("Soy mayor de edad");
+		}
+		else
+		{
+			Console.WriteLine("Soy menor de edad. No puedo ir a discotecas");
+			
+	}
+	}
+}
