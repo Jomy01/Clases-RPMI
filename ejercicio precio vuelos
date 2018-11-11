@@ -1,0 +1,53 @@
+// Una compañía aérea cobra 3€ con 35 céntimos por cada kilómetro.
+// En viajes más largos de 800km, se aplica un descuento de 8% sobre el precio final
+// En viajes muy cortos, de menos de 200km, el precio total se encarece un 15%.
+// A los que son clientes anteriores este último incremento no se les aplica.
+
+using System;
+
+public class PrecioVuelos
+{
+    public static void Main()
+    {
+        // Declaración de variables
+        int distanciaViaje;
+        float precioFinal;
+        bool clientePrevio;
+        string inputClientePrevio;
+
+        // Input
+        Console.WriteLine("¿Cuántos kilómetros hay hasta su destino?");
+        distanciaViaje = Convert.ToInt32(Console.ReadLine());
+
+        Console.WriteLine("Ha sido usted cliente previo: (introduzca si o no)");
+        inputClientePrevio = Console.ReadLine();
+        if (inputClientePrevio == "si")
+        {
+            clientePrevio = true;
+        }
+        if (inputClientePrevio == "no")
+        {
+            clientePrevio = false;
+        }
+        else
+        {
+            Console.WriteLine("ERROR: introducción de datos incorrecta. ");
+            return;
+        }
+
+        // Operaciones
+        precioFinal = 3.35f * distanciaViaje;
+
+        if (distanciaViaje > 800)
+        {
+            precioFinal = precioFinal * 0.92f;
+        }
+        else if (distanciaViaje < 200 && clientePrevio == false)
+        {
+            precioFinal = precioFinal * 1.15f;
+        }
+
+        // Output
+        Console.WriteLine("El precio final de su viaje sería: " + precioFinal);
+    }
+}
